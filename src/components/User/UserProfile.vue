@@ -1,16 +1,16 @@
 <template>
   <div id="userProfile">
-    <h1 class="mx-auto my-2 indigo lighten-2 white--text">Trader Profile</h1>
+    <h1 class="mx-auto my-2 blue-grey lighten-2 white--text">Trader Profile</h1>
     <h2
       v-if="$auth.isAuthenticated"
-      class="mx-auto my-2 indigo--text lighten-4"
+      class="mx-auto my-2 blue-grey--text lighten-4"
     >Welcome {{userEmail|getUserName}}</h2>
     <h3
       v-if="$auth.isAuthenticated"
-      class="mx-auto my-2 indigo--text lighten-4"
+      class="mx-auto my-2 blue-grey--text lighten-4"
     >Balance: {{balance | USD}}</h3>
 
-    <h3 class="mx-auto my-2 indigo--text lighten-4">Purchased cars:</h3>
+    <h3 class="mx-auto my-2 blue-grey--text lighten-4">Purchased cars:</h3>
     <v-container fluid>
       <v-row class="cars mt-4">
         <SingleCar v-for="(car,i) in cars" :key="i" :car="car"></SingleCar>

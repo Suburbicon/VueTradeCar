@@ -32,3 +32,5 @@ Vue.filter("getUserName", function(str) {
     return str.match(/^([^@]*)@/)[1];
   }
 });
+
+

@@ -10,6 +10,9 @@ export const ValidationMixin = {
       } else if (this.car.length < 3) {
         this.errors.push("Car name should be at least 3 symbols!");
         return;
+      } else if (this.bin.length < 12) {
+        this.errors.push("BIN should be at least 12 symbols!");
+        return;
       } else if (!this.price) {
         this.errors.push("Car price is required!");
         return;
@@ -69,7 +72,7 @@ export const ValidationMixin = {
       ) {
         this.errors.push("Acceleration should be between 2 and 30 digits!");
         return;
-      } else if (this.origin.length !== 2) {
+      } else if (this.origin.length < 2) {
         this.errors.push("Car origin should be at least 3 symbols!");
         return;
       } else if (!this.checkDate(this.date)) {
@@ -86,6 +89,7 @@ export const ValidationMixin = {
     },
     resetForm() {
       this.car = "";
+      this.bin = "";
       this.price = null;
       this.miles = null;
       this.cylinders = null;

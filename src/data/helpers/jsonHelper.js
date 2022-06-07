@@ -4487,10 +4487,19 @@ let addQuantity = function() {
 };
 addQuantity(cars);
 
+let addBIN = function() {
+  cars.forEach(car => {
+    let randomBIN = Math.floor(Math.random() * 12);
+    car.bin = 1 + randomBIN;
+  });
+  return cars;
+};
+addBIN(cars);
+
 let addPicture = function() {
   cars.forEach(car => {
     car.Picture =
-      "https://drop.ndtv.com/albums/AUTO/porsche-taycan-turbo/1200x900_1.jpg";
+      "https://www.ixbt.com/img/n1/news/2021/10/6/084ed9e98d6d6c45ac49b1474002d2f0_large.jpg";
   });
   return cars;
 };

@@ -1,38 +1,57 @@
 <template>
   <v-app-bar app color="primary" dark>
-    <v-icon id="mobileIcon" class="ml-2" @click="showMenu=!showMenu">menu</v-icon>
+    <v-icon id="mobileIcon" class="ml-2" @click="showMenu = !showMenu"
+      >menu</v-icon
+    >
     <nav class="d-flex align-center">
-      <div class="menu" v-bind:class="{ hideShowMenu: !showMenu }" @click="showMenu=!showMenu">
-        <router-link tag="a" class="indigo--text text--lighten-5 headline" to="/">Car Dealer</router-link>
+      <div
+        class="menu"
+        v-bind:class="{ hideShowMenu: !showMenu }"
+        @click="showMenu = !showMenu"
+      >
+        <router-link
+          tag="a"
+          class="blue-grey--text text--lighten-5 headline"
+          to="/"
+          >Car Dealer</router-link
+        >
         <router-link
           v-if="$auth.isAuthenticated"
           to="/addcarform"
-          class="indigo--text text--lighten-4 subtitle-1"
+          class="blue-grey--text text--lighten-4 subtitle-1"
           tag="a"
-        >Sell your car</router-link>
+          >Register car</router-link
+        >
         <router-link
           tag="a"
           to="/userprofile"
-          class="indigo--text text--lighten-4 subtitle-1"
+          class="blue-grey--text text--lighten-4 subtitle-1"
           v-if="$auth.isAuthenticated"
-        >Profile</router-link>
+          >Profile</router-link
+        >
       </div>
     </nav>
     <v-spacer></v-spacer>
 
     <div v-if="!$auth.loading">
       <!-- show login when not authenticated -->
-      <v-btn class="indigo lighten-5 indigo--text" v-if="!$auth.isAuthenticated" @click="login">
-        <v-icon v-if="!$auth.isAuthenticated" class="shrink mr-2">face</v-icon>Log in
+      <v-btn
+        class="blue-grey lighten-5 blue-grey--text"
+        v-if="!$auth.isAuthenticated"
+        @click="login"
+      >
+        <v-icon v-if="!$auth.isAuthenticated" class="shrink mr-2">face</v-icon
+        >Log in
       </v-btn>
       <!-- show logout when authenticated -->
 
       <v-btn
-        class="indigo lighten-4 indigo--text mr-2"
+        class="blue-grey lighten-4 blue-grey--text mr-2"
         v-if="$auth.isAuthenticated"
         @click="logout"
       >
-        <v-icon v-if="$auth.isAuthenticated" class="shrink mr-2">done</v-icon>Log out
+        <v-icon v-if="$auth.isAuthenticated" class="shrink mr-2">done</v-icon
+        >Log out
       </v-btn>
     </div>
   </v-app-bar>
@@ -89,7 +108,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background: #3f51b5;
+    background: #373739;
   }
   .hideShowMenu {
     display: none;

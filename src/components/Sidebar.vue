@@ -60,7 +60,9 @@
                 </template>
               </v-range-slider>
               <div class="my-2">
-                <v-btn small color="primary" @click="emitSliderRanges">Apply price range</v-btn>
+                <v-btn small color="primary" @click="emitSliderRanges"
+                  >Apply price range</v-btn
+                >
               </div>
             </v-col>
           </v-row>
@@ -69,9 +71,9 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <p class="px-2 indigo--text">
+        <p class="px-2 blue-grey--text">
           Number of cars:
-          <strong>{{cars.length}}</strong>
+          <strong>{{ cars.length }}</strong>
         </p>
       </v-col>
     </v-row>
@@ -142,21 +144,21 @@ export default {
 .v-label.theme--light,
 #main input,
 .v-list-item__content {
-  color: #3f51b5;
+  color: #373739;
 }
 .v-card.v-card--flat.v-sheet.theme--light.transparent {
   width: 100%;
 }
 
 #app .theme--light.v-overflow-btn .v-input__control::before {
-  background-color: #3f51b5 !important;
+  background-color: #373739 !important;
 }
 .theme--light.v-text-field > .v-input__control > .v-input__slot::before {
-  border-color: #3f51b5 !important;
+  border-color: #373739 !important;
 }
 
 .mdi-menu-down::before {
-  color: #3f51b5;
+  color: #373739;
 }
 
 #app .search input {

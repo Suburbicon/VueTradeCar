@@ -15,14 +15,12 @@
         <v-col cols="12" sm="8" md="9">
           <v-row>
             <SingleCar
-              v-for="(car, i) of visibleCars.slice(0,50)"
+              v-for="(car, i) of visibleCars.slice(0, 50)"
               :key="i"
               :car="car"
               @update="loadCars"
             >
-              {{
-              car.Name
-              }}
+              {{ car.Name }}
             </SingleCar>
           </v-row>
         </v-col>
@@ -34,7 +32,12 @@
         <v-tab @click="changePageSize(20)">Show 20</v-tab>
         <v-tab @click="changePageSize(30)">Show 30</v-tab>
       </v-tabs>
-      <v-pagination total-visible="7" v-model="page" class="my-4" :length="paginationTabs"></v-pagination>
+      <v-pagination
+        total-visible="7"
+        v-model="page"
+        class="my-4"
+        :length="paginationTabs"
+      ></v-pagination>
     </div>
   </div>
 </template>
@@ -120,7 +123,7 @@ export default {
   background: #90caf9;
 }
 .v-slide-group__content.v-tabs-bar__content {
-  background: #3f51b5;
+  background: #373739;
   color: white;
 }
 #pagination .v-tab {

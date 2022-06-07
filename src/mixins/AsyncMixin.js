@@ -163,6 +163,7 @@ export const PostCarMixin = {
     AddCar() {
       let newCar = {
         Name: this.car,
+        Bin: this.bin,
         Miles_per_Gallon: this.miles,
         Cylinders: this.cylinders,
         Displacement: this.displacement,
@@ -176,6 +177,7 @@ export const PostCarMixin = {
         Picture: this.image,
         id: null
       };
+      console.log(this.bin);
       axios.post(baseURL, newCar);
     }
   }
